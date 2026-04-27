@@ -1,6 +1,8 @@
 import React from "react"; import { ArrowRight, BadgeCheck, BriefcaseBusiness, CheckCircle2, Globe2, LockKeyhole, Mail, Scale, ShieldCheck, Sparkles, TrendingUp, } from "lucide-react"; import { motion } from "framer-motion";
 
-export default function TradeIotaLandingPage() { const sellerEmail = "aiagent@ethermail.io";
+export default function TradeIotaLandingPage() { const sellerEmail = "your-email@example.com";
+
+// Add logo files inside the public folder: // public/iota-logo.svg becomes /iota-logo.svg // public/iotanames-logo.svg becomes /iotanames-logo.svg const brandLogos = [ { name: "IOTA", src: "/iota-logo.svg" }, { name: "IOTA Names", src: "/iotanames-logo.svg" }, ];
 
 const useCases = [ "Digital trade platform", "Trade finance portal", "RWA tokenization brand", "Supply chain verification", "Web3 marketplace", "Enterprise DLT solution", ];
 
@@ -41,6 +43,26 @@ return ( <main className="min-h-screen overflow-hidden bg-[#050816] text-white">
         <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
           A clean, high-authority domain name for digital trade, tokenization, supply chain, and next-generation commerce infrastructure.
         </p>
+
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500">Inspired by ecosystem naming</span>
+          {brandLogos.map((logo) => (
+            <div
+              key={logo.name}
+              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 backdrop-blur"
+            >
+              <img
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                className="h-5 w-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+              <span className="text-sm font-bold text-slate-200">{logo.name}</span>
+            </div>
+          ))}
+        </div>
 
         <div className="mt-9 flex flex-col gap-4 sm:flex-row">
           <a
