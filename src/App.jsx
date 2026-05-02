@@ -150,7 +150,83 @@ export default function App() {
           <button>Send / Transfer</button>
         </div>
       </section>
-    </main>
+   
+{/* FOOTER */}
+<footer className="footer">
+  <div className="footerGrid">
+
+    <div>
+      <h3>trade.iota</h3>
+
+      <p>
+        Premium IOTA Name designed for global trade,
+        tokenized assets, digital identity,
+        and wallet-address routing.
+      </p>
+    </div>
+
+    <div>
+      <h4>Compliance</h4>
+
+      <ul>
+        <li>Human-readable wallet identity</li>
+        <li>Digital trade infrastructure</li>
+        <li>Tokenized asset compatibility</li>
+        <li>Enterprise-ready naming layer</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Resources</h4>
+
+      <ul>
+        <li>
+          <a
+            href="https://iota.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            IOTA Foundation
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://docs.iota.org"
+            target="_blank"
+            rel="noreferrer"
+          >
+            IOTA Docs
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://iotanames.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            IOTA Names
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="footerBottom">
+    <p>
+      © 2026 trade.iota • Built on IOTA MoveVM •
+      Decentralized Digital Identity Infrastructure
+    </p>
+
+    <p>
+      trade.iota is an independently owned IOTA Name
+      and is not officially affiliated with the IOTA Foundation.
+    </p>
+  </div>
+</footer>
+
+ </main>
   );
 }
 
@@ -449,4 +525,72 @@ const styles = `
       padding-top:80px;
     }
   }
+
+.footer{
+  margin-top:80px;
+  padding:60px 22px 30px;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(10px);
+}
+
+.footerGrid{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+.footer h3{
+  margin:0 0 14px;
+  font-size:28px;
+  letter-spacing:-.04em;
+}
+
+.footer h4{
+  margin-bottom:14px;
+  color:#67e8f9;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+}
+
+.footer p{
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.footer li{
+  margin-bottom:12px;
+  color:#cbd5e1;
+}
+
+.footer a{
+  color:#cbd5e1;
+  text-decoration:none;
+  transition:.2s;
+}
+
+.footer a:hover{
+  color:#67e8f9;
+}
+
+.footerBottom{
+  max-width:1180px;
+  margin:40px auto 0;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footerBottom p{
+  color:#94a3b8;
+  font-size:14px;
+}
 `;
