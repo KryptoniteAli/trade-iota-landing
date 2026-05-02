@@ -17,10 +17,8 @@ import React from "react";
 // a wallet address.
 
 // Importing logo images as modules ensures Vite rewrites
-// the URLs at build time so they load correctly in production.
-import iotaLogoImg from "./assets/iota-logo.png";
-import iotaNamesLogoImg from "./assets/iotanames.jpg";
-import tradeportLogoImg from "./assets/tradeport.svg";
+// the URLs at build time so they load correctly 
+
 import tradeBg from "./assets/trade-bg.png";
 export default function App() {
   const useCases = [
@@ -119,28 +117,6 @@ export default function App() {
   </div>
 </section>
 
-
-
-
-
-
-
-        <nav className="nav">
-          <a href="https://www.iota.org" target="_blank" rel="noreferrer" className="brand">
-            <img src={iotaLogoImg} alt="IOTA logo" className="brandImg" />
-            <span>IOTA</span>
-          </a>
-          <div className="navLinks">
-            <a href="https://iotanames.com" target="_blank" rel="noreferrer" className="navLink">
-              <img src={iotaNamesLogoImg} alt="IOTA Names logo" className="navLogo" />
-              <span>IOTA Names</span>
-            </a>
-            <a href="https://www.tradeport.xyz" target="_blank" rel="noreferrer" className="navLink">
-              <img src={tradeportLogoImg} alt="TradePort logo" className="navLogo" />
-              <span>TradePort</span>
-            </a>
-          </div>
-        </nav>
         <div className="heroContent">
           <p className="tagline">Premium IOTA Name For Sale</p>
           <h1>
