@@ -70,7 +70,7 @@ export default function App() {
               rel="noreferrer"
               className="primary"
             >
-              View on IOTA Names
+             Get your own IOTA Names
             </a>
 
             <a
@@ -79,7 +79,7 @@ export default function App() {
               rel="noreferrer"
               className="secondary"
             >
-              Explore TradePort
+              Get it on TradePort
             </a>
           </div>
         </div>
