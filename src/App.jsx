@@ -1,8 +1,6 @@
 import React from "react";
 
 import iotaLogo from "./assets/iota-logo.png";
-import iotaNamesLogo from "./assets/iotanames.jpg";
-import tradeportLogo from "./assets/tradeport.svg";
 import tradeBg from "./assets/trade-bg.png";
 
 export default function App() {
@@ -31,6 +29,7 @@ export default function App() {
           `,
         }}
       >
+        {/* NAV */}
         <nav className="nav">
           <a
             href="https://iota.org"
@@ -39,18 +38,16 @@ export default function App() {
             className="brand"
           >
             <img src={iotaLogo} alt="IOTA" />
-            
-            
-  </a>
-</nav>
 
+            <div>
+              <strong>IOTA</strong>
+              <span>Official Network</span>
+            </div>
+          </a>
+        </nav>
 
-
+        {/* HERO CONTENT */}
         <div className="heroContent">
-
-
-
-
           <p className="badge">PREMIUM IOTA NAME FOR SALE</p>
 
           <h1>
@@ -61,24 +58,25 @@ export default function App() {
             A premium human-readable IOTA Name designed for
             global trade, tokenized assets, wallet addressing,
             supply-chain verification, and digital commerce.
- </p>
+          </p>
+
+          <div className="actions">
             <a
-              href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items&tokenId=0x0e444e3a3f543fb7ce87b0ae0c913186e132962997852254026521e0795399af&modalSlug=0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration&nav=1"
-              target="_blank"
-              rel="noreferrer"
-              className="secondary"
-            >
-              Get it on TradePort
-            </a>
-
-
- <a
               href="https://iotanames.com"
               target="_blank"
               rel="noreferrer"
               className="primary"
             >
-             Mint  your own IOTA Names
+              View on IOTA Names
+            </a>
+
+            <a
+              href="https://tradeport.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="secondary"
+            >
+              Explore TradePort
             </a>
           </div>
         </div>
@@ -202,8 +200,7 @@ const styles = `
     max-width:1180px;
     margin:0 auto;
     display:flex;
-    justify-content:space-between;
-    gap:20px;
+    align-items:center;
   }
 
   .brand{
@@ -232,51 +229,6 @@ const styles = `
     color:#cbd5e1;
     text-transform:uppercase;
     letter-spacing:.18em;
-  }
-
-  .partners{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    width:min(420px,58vw);
-  }
-
-  .partner{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    color:white;
-    text-decoration:none;
-    padding:16px;
-    border-radius:28px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.12);
-    backdrop-filter:blur(20px);
-    transition:.25s;
-  }
-
-  .partner:hover{
-    transform:translateY(-3px);
-    border-color:rgba(34,211,238,.4);
-  }
-
-  .partner img{
-    width:58px;
-    height:58px;
-    border-radius:18px;
-    object-fit:cover;
-    background:white;
-    padding:6px;
-  }
-
-  .partner strong{
-    display:block;
-    font-size:22px;
-  }
-
-  .partner span{
-    color:#cbd5e1;
-    font-size:14px;
   }
 
   .heroContent{
@@ -489,14 +441,6 @@ const styles = `
   }
 
   @media(max-width:760px){
-
-    .nav{
-      flex-direction:column;
-    }
-
-    .partners{
-      width:100%;
-    }
 
     .subnames,
     .wallet{
