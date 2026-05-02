@@ -21,7 +21,7 @@ import React from "react";
 import iotaLogoImg from "./assets/iota-logo.png";
 import iotaNamesLogoImg from "./assets/iotanames.jpg";
 import tradeportLogoImg from "./assets/tradeport.svg";
-import worldMapImg from "./assets/world-map.png";
+// import worldMapImg from "./assets/world-map.png";
 
 export default function App() {
   const useCases = [
