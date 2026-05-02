@@ -61,9 +61,13 @@ export default function App() {
     <div className="page">
       <style>{styles}</style>
       <header className="hero">
-        <div className="heroBg">
-          <img className="heroMap" src={worldMapImg} alt="Decorative world map" />
-        </div>
+
+
+<div className="heroBg"></div>
+
+     
+
+
         <nav className="nav">
           <a href="https://www.iota.org" target="_blank" rel="noreferrer" className="brand">
             <img src={iotaLogoImg} alt="IOTA logo" className="brandImg" />
