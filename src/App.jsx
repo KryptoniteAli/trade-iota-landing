@@ -1,6 +1,17 @@
-import React from "react"; import { motion } from "framer-motion"; import { ArrowRight, Globe2, ShieldCheck, Wallet, FileCheck2, Boxes, Landmark, CheckCircle2 } from "lucide-react"; 
+import React from "react"; import { motion } from "framer-motion"; import { ArrowRight, Globe2, ShieldCheck, Wallet, FileCheck2, Boxes, Landmark, CheckCircle2 } from "lucide-react"; const Button = ({ children, className = '', variant = 'default' }) => ( <button className={transition-all duration-200 ${variant === 'outline' ? 'border border-white/20 bg-white/5 hover:bg-white/10' : 'bg-cyan-400 text-slate-950 hover:bg-cyan-300'} font-medium ${className}}
 
-export default function TradeIotaLandingPage() { const features = [ { icon: <FileCheck2 className="h-6 w-6" />, title: "Verifiable trade documents", text: "Digitize invoices, certificates, bills of lading, and shipment records with tamper-evident proofs on IOTA." }, { icon: <Boxes className="h-6 w-6" />, title: "Tokenized goods and assets", text: "Represent consignments, product passports, warehouse receipts, and real-world trade assets as onchain objects." }, { icon: <ShieldCheck className="h-6 w-6" />, title: "Identity-first trust layer", text: "Connect traders, authorities, logistics providers, and finance partners through verifiable digital identities." }, { icon: <Wallet className="h-6 w-6" />, title: "Human-readable wallet routing", text: "Use IOTA Names so a domain-style name can point to a wallet address, making payments easier and safer." } ];
+> 
+
+{children}
+
+  </button>
+);const Card = ({ children, className = '' }) => (
+
+  <div className={`shadow-2xl ${className}`}>{children}</div>
+);const CardContent = ({ children, className = '' }) => (
+
+  <div className={className}>{children}</div>
+);export default function TradeIotaLandingPage() { const features = [ { icon: <FileCheck2 className="h-6 w-6" />, title: "Verifiable trade documents", text: "Digitize invoices, certificates, bills of lading, and shipment records with tamper-evident proofs on IOTA." }, { icon: <Boxes className="h-6 w-6" />, title: "Tokenized goods and assets", text: "Represent consignments, product passports, warehouse receipts, and real-world trade assets as onchain objects." }, { icon: <ShieldCheck className="h-6 w-6" />, title: "Identity-first trust layer", text: "Connect traders, authorities, logistics providers, and finance partners through verifiable digital identities." }, { icon: <Wallet className="h-6 w-6" />, title: "Human-readable wallet routing", text: "Use IOTA Names so a domain-style name can point to a wallet address, making payments easier and safer." } ];
 
 const useCases = [ "Send IOTA or assets to acme.iota instead of copying a long wallet address.", "Attach a trusted trade identity to a readable name such as exporter.iota or portagent.iota.", "Use one branded name as a payment, identity, and verification endpoint for trade partners.", "Reduce address-entry mistakes when settling invoices or transferring tokenized documents." ];
 
