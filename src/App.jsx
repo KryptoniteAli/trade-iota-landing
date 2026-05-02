@@ -38,16 +38,14 @@ export default function App() {
             className="brand"
           >
             <img src={iotaLogo} alt="IOTA" />
-
           </a>
         </nav>
-
         {/* HERO CONTENT */}
         <div className="heroContent">
           <p className="badge">PREMIUM IOTA NAME FOR SALE</p>
 
           <h1>
-            Own <span>trade.iota</span>
+             <span>trade.iota</span>
           </h1>
 
           <p className="lead">
@@ -63,7 +61,7 @@ export default function App() {
               rel="noreferrer"
               className="primary"
             >
-              But it on Tradeport
+              Buy it on Tradeport
             </a>
 
             <a
