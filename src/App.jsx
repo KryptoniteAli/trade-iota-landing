@@ -36,7 +36,9 @@ export default function App() {
       {/* Navigation bar with IOTA logo, site name, links to iotanames.com and TradePort, and a contact button */}
 
 
-// Navigation bar: wrap items on small screens to avoid overlap
+
+
+
 <nav className="flex flex-wrap items-center justify-between gap-y-4 px-6 py-4">
   <div className="flex items-center gap-3">
     <img src={iotaLogo} alt="IOTA logo" className="w-8 h-8" />
