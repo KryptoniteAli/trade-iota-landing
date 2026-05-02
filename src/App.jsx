@@ -39,10 +39,6 @@ export default function App() {
           >
             <img src={iotaLogo} alt="IOTA" />
 
-            <div>
-              <strong>IOTA</strong>
-              <span>Official Network</span>
-            </div>
           </a>
         </nav>
 
