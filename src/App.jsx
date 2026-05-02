@@ -133,6 +133,71 @@ export default function App() {
 
 
 
+{/* WALLET ROUTING */}
+<section className="wallet-routing">
+
+  <div className="wallet-left">
+    <span className="section-tag">
+      HUMAN READABLE WALLET
+    </span>
+
+    <h2>
+      Send directly to <span>trade.iota</span>
+    </h2>
+
+    <p>
+      Replace long and complicated wallet addresses
+      with a simple, trusted, human-readable identity.
+      trade.iota can function as a payment destination,
+      digital trade account, or enterprise wallet namespace.
+    </p>
+
+    <div className="wallet-benefits">
+
+      <div className="wallet-benefit">
+        ✓ Easier wallet transfers
+      </div>
+
+      <div className="wallet-benefit">
+        ✓ Reduced copy/paste errors
+      </div>
+
+      <div className="wallet-benefit">
+        ✓ Trusted enterprise identity
+      </div>
+
+      <div className="wallet-benefit">
+        ✓ Better UX for global commerce
+      </div>
+
+    </div>
+  </div>
+
+  <div className="wallet-demo">
+
+    <div className="wallet-box old">
+      <small>Old wallet address</small>
+
+      <code>
+        0x8f29ab13c7d91ac4f99b...
+        29fd3a12ef77bb81aa9
+      </code>
+    </div>
+
+    <div className="arrow">
+      →
+    </div>
+
+    <div className="wallet-box new">
+      <small>Human-readable address</small>
+
+      <strong>trade.iota</strong>
+    </div>
+
+  </div>
+
+</section>
+
       <section className="compliance" id="compliance">
         <div className="complianceImage" />
 
@@ -446,6 +511,109 @@ h1{
   line-height: 1.6;
   font-size: 0.95rem;
 }
+/* WALLET ROUTING */
 
+.wallet-routing{
+  max-width:1180px;
+  margin:80px auto;
+  padding:50px;
+  border-radius:28px;
+  border:1px solid rgba(34,211,238,.18);
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(18px);
+
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:40px;
+  align-items:center;
+}
+
+.wallet-routing h2{
+  font-size:clamp(36px,6vw,62px);
+  line-height:1;
+  margin:16px 0 20px;
+}
+
+.wallet-routing h2 span{
+  color:#22d3ee;
+}
+
+.wallet-routing p{
+  color:#cbd5e1;
+  line-height:1.8;
+  font-size:18px;
+  max-width:700px;
+}
+
+.wallet-benefits{
+  margin-top:28px;
+  display:grid;
+  gap:14px;
+}
+
+.wallet-benefit{
+  padding:14px 18px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  color:#e2e8f0;
+  font-weight:600;
+}
+
+.wallet-demo{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  align-items:center;
+}
+
+.wallet-box{
+  width:100%;
+  padding:26px;
+  border-radius:24px;
+  background:#020617;
+  border:1px solid rgba(34,211,238,.15);
+}
+
+.wallet-box small{
+  display:block;
+  margin-bottom:12px;
+  color:#67e8f9;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:11px;
+  font-weight:900;
+}
+
+.wallet-box code{
+  display:block;
+  color:#94a3b8;
+  line-height:1.7;
+  word-break:break-all;
+}
+
+.wallet-box strong{
+  font-size:42px;
+  letter-spacing:-.05em;
+  color:#22d3ee;
+}
+
+.arrow{
+  font-size:44px;
+  color:#22d3ee;
+  font-weight:900;
+}
+
+@media(max-width:800px){
+
+  .wallet-routing{
+    grid-template-columns:1fr;
+    padding:30px;
+  }
+
+  .wallet-box strong{
+    font-size:34px;
+  }
+}
 
 `;
