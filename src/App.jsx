@@ -21,8 +21,7 @@ import React from "react";
 import iotaLogoImg from "./assets/iota-logo.png";
 import iotaNamesLogoImg from "./assets/iotanames.jpg";
 import tradeportLogoImg from "./assets/tradeport.svg";
- import worldMapImg from "./assets/trade-bg.png";
-
+import tradeBg from "./assets/trade-bg.png";
 export default function App() {
   const useCases = [
     {
@@ -63,9 +62,67 @@ export default function App() {
       <header className="hero">
 
 
-<div className="heroBg">
-  <img className="heroMap" src={worldMapImg} alt="Decorative world map" />
-</div>     
+{/* HERO SECTION */}
+<section
+  className="relative overflow-hidden px-6 py-24 text-center bg-cover bg-center"
+  style={{
+    backgroundImage: `
+      linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.85)
+      ),
+      url(${tradeBg})
+    `,
+  }}
+>
+  <div className="absolute inset-0 bg-cyan-500/10 blur-3xl"></div>
+
+  <div className="relative z-10 max-w-5xl mx-auto">
+    <div className="inline-block px-5 py-2 mb-6 rounded-full border border-cyan-400/40 bg-cyan-500/10">
+      <span className="tracking-[0.3em] text-cyan-300 text-sm font-semibold">
+        PREMIUM IOTA NAME FOR SALE
+      </span>
+    </div>
+
+    <h1 className="text-5xl md:text-7xl font-black leading-tight">
+      Own the Future of
+      <span className="block text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.8)]">
+        trade.iota
+      </span>
+    </h1>
+
+    <p className="mt-8 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+      A premium human-readable IOTA Name for global trade,
+      tokenized assets, supply-chain verification,
+      and wallet-address routing.
+    </p>
+
+    <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+      <a
+        href="https://iotanames.com"
+        target="_blank"
+        rel="noreferrer"
+        className="bg-cyan-400 hover:bg-cyan-300 text-black font-bold px-8 py-4 rounded-2xl transition shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+      >
+        View on IOTA Names
+      </a>
+
+      <a
+        href="https://tradeport.xyz"
+        target="_blank"
+        rel="noreferrer"
+        className="border border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-black px-8 py-4 rounded-2xl transition"
+      >
+        Explore TradePort
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
 
         <nav className="nav">
