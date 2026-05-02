@@ -224,7 +224,7 @@ export default function App() {
           <p>Serious inquiries are welcome. Send your offer and preferred transfer process.</p>
         </div>
 
-        <a href="https://tradeport.xyz" target="_blank" rel="noreferrer" className="primary">
+        <a href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items&tokenId=0x0e444e3a3f543fb7ce87b0ae0c913186e132962997852254026521e0795399af&modalSlug=0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration&nav=1" target="_blank" rel="noreferrer" className="primary">
           Contact Seller →
         </a>
       </section>
