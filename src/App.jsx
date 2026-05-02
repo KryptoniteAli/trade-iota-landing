@@ -43,38 +43,12 @@ export default function App() {
               <strong>IOTA</strong>
               <span>Official Network</span>
             </div>
-          </a>
-
-
-
-          <div className="partners">
-            <a
-              href="https://iotanames.com"
-              target="_blank"
-              rel="noreferrer"
-              className="partner"
-            >
-              <img src={iotaNamesLogo} alt="IOTA Names" />
-              <div>
-                <strong>IOTA Names</strong>
-                <span>Get your unique iotanames here</span>
-              </div>
             </a>
 
-            <a
-              href="https://tradeport.xyz"
-              target="_blank"
-              rel="noreferrer"
-              className="partner"
-            >
-              <img src={tradeportLogo} alt="TradePort" />
-              <div>
-                <strong>TradePort</strong>
-                <span>Trade here</span>
-              </div>
-            </a>
-          </div>
-        </nav>
+
+
+
+
 
         <div className="heroContent">
 
