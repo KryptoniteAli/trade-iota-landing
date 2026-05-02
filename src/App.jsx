@@ -1,4 +1,5 @@
 import React from "react";
+
 import iotaLogo from "./assets/iota-logo.png";
 import iotaNamesLogo from "./assets/iotanames.jpg";
 import tradeportLogo from "./assets/tradeport.svg";
@@ -10,62 +11,120 @@ export default function App() {
     "Readable wallet address for payments and assets",
     "Gateway for invoices, certificates, and trade documents",
     "Brandable entry point for RWA and NFT trade assets",
+    "Unlimited subnames minting for teams, shipments, invoices, and partners",
   ];
 
   return (
     <main className="page">
       <style>{styles}</style>
 
+      {/* HERO */}
       <section
         className="hero"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(2, 6, 23, 0.92), rgba(8, 47, 73, 0.78)),
+            linear-gradient(
+              rgba(2,6,23,0.92),
+              rgba(15,23,42,0.88)
+            ),
             url(${tradeBg})
           `,
         }}
       >
         <nav className="nav">
-          <a href="https://www.iota.org" target="_blank" rel="noreferrer" className="brand">
+          <a
+            href="https://iota.org"
+            target="_blank"
+            rel="noreferrer"
+            className="brand"
+          >
             <img src={iotaLogo} alt="IOTA" />
             <div>
               <strong>IOTA</strong>
               <span>Official Network</span>
             </div>
           </a>
+
+
+
+          <div className="partners">
+            <a
+              href="https://iotanames.com"
+              target="_blank"
+              rel="noreferrer"
+              className="partner"
+            >
+              <img src={iotaNamesLogo} alt="IOTA Names" />
+              <div>
+                <strong>IOTA Names</strong>
+                <span>Get your unique iotanames here</span>
+              </div>
+            </a>
+
+            <a
+              href="https://tradeport.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="partner"
+            >
+              <img src={tradeportLogo} alt="TradePort" />
+              <div>
+                <strong>TradePort</strong>
+                <span>Trade here</span>
+              </div>
+            </a>
+          </div>
         </nav>
 
         <div className="heroContent">
-          <p className="badge">Premium IOTA Name For Sale</p>
+
+
+
+
+          <p className="badge">PREMIUM IOTA NAME FOR SALE</p>
 
           <h1>
             Own <span>trade.iota</span>
           </h1>
 
           <p className="lead">
-            A premium human-readable IOTA Name for global trade, tokenized assets,
-            supply-chain verification, and wallet-address routing.
+            A premium human-readable IOTA Name designed for
+            global trade, tokenized assets, wallet addressing,
+            supply-chain verification, and digital commerce.
           </p>
 
           <div className="actions">
-            <a href="https://iotanames.com" target="_blank" rel="noreferrer" className="primary">
+            <a
+              href="https://iotanames.com"
+              target="_blank"
+              rel="noreferrer"
+              className="primary"
+            >
               View on IOTA Names
             </a>
 
-            <a href="https://www.tradeport.xyz" target="_blank" rel="noreferrer" className="secondary">
+            <a
+              href="https://tradeport.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="secondary"
+            >
               Explore TradePort
             </a>
           </div>
         </div>
       </section>
 
+      {/* USE CASES */}
       <section className="section">
         <p className="sectionLabel">Why trade.iota matters</p>
-        <h2>A short name for a global trade network.</h2>
+
+        <h2>A premium digital identity for global trade.</h2>
 
         <p className="sectionText">
-          trade.iota can serve as a simple onchain identity for trade platforms,
-          exporters, logistics providers, marketplaces, and RWA builders.
+          trade.iota can function as a wallet address,
+          enterprise identity, document hub, payment gateway,
+          and tokenized trade infrastructure layer.
         </p>
 
         <div className="grid">
@@ -78,21 +137,55 @@ export default function App() {
         </div>
       </section>
 
+      {/* SUBNAMES */}
+      <section className="subnames">
+        <div>
+          <p className="sectionLabel">Unlimited Subnames</p>
+
+          <h2>Create unlimited branded subnames.</h2>
+
+          <p className="sectionText">
+            Build a complete trade ecosystem under trade.iota.
+            Create custom names for invoices, payments,
+            exporters, logistics providers, customs,
+            trade finance, and supply-chain operations.
+          </p>
+        </div>
+
+        <div className="subnameCard">
+          <span>Examples</span>
+
+          <strong>pay.trade.iota</strong>
+          <strong>shipping.trade.iota</strong>
+          <strong>invoice.trade.iota</strong>
+          <strong>africa.trade.iota</strong>
+          <strong>customs.trade.iota</strong>
+        </div>
+      </section>
+
+      {/* WALLET */}
       <section className="wallet">
         <div>
-          <p className="sectionLabel">Domain as wallet address</p>
-          <h2>Send to trade.iota instead of a long wallet address.</h2>
+          <p className="sectionLabel">Wallet Address</p>
+
+          <h2>Send payments directly to trade.iota</h2>
+
           <p className="sectionText">
-            A readable name can reduce mistakes when sending payments, NFTs,
-            trade documents, or tokenized real-world assets.
+            Replace complex wallet addresses with a readable,
+            trusted digital identity for payments,
+            tokenized assets, invoices, and trade settlement.
           </p>
         </div>
 
         <div className="walletCard">
           <small>Recipient</small>
+
           <strong>trade.iota</strong>
-          <small>Resolves to</small>
+
+          <small>Wallet Address</small>
+
           <code>0x8f2a...91b2</code>
+
           <button>Send / Transfer</button>
         </div>
       </section>
@@ -101,361 +194,352 @@ export default function App() {
 }
 
 const styles = `
-  * {
-    box-sizing: border-box;
+  *{
+    box-sizing:border-box;
   }
 
-  body {
-    margin: 0;
+  body{
+    margin:0;
+    background:#020617;
   }
 
-  .page {
-    min-height: 100vh;
-    background: #020617;
-    color: white;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  .page{
+    min-height:100vh;
+    background:#020617;
+    color:white;
+    font-family:Inter, sans-serif;
   }
 
-  .hero {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    padding: 22px;
-    position: relative;
+  .hero{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    padding:24px;
+    position:relative;
   }
 
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
     background:
-      radial-gradient(circle at top right, rgba(34, 211, 238, 0.22), transparent 34%),
-      radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.24), transparent 36%);
-    pointer-events: none;
+      radial-gradient(circle at top right, rgba(34,211,238,0.18), transparent 30%),
+      radial-gradient(circle at bottom left, rgba(124,58,237,0.2), transparent 34%);
   }
 
-  .nav {
-    position: relative;
-    z-index: 2;
-    max-width: 1180px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    align-items: flex-start;
+  .nav{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: white;
-    text-decoration: none;
+  .brand{
+    display:flex;
+    gap:14px;
+    align-items:center;
+    color:white;
+    text-decoration:none;
   }
 
-  .brand img {
-    width: 54px;
-    height: 54px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.08);
-    padding: 8px;
+  .brand img{
+    width:56px;
+    height:56px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.08);
+    padding:8px;
   }
 
-  .brand strong {
-    display: block;
-    font-size: 30px;
-    letter-spacing: -0.04em;
+  .brand strong{
+    display:block;
+    font-size:30px;
   }
 
-  .brand span {
-    display: block;
-    color: #cbd5e1;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 11px;
-    font-weight: 800;
+  .brand span{
+    font-size:11px;
+    color:#cbd5e1;
+    text-transform:uppercase;
+    letter-spacing:.18em;
   }
 
-  .partners {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: min(420px, 58vw);
+  .partners{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    width:min(420px,58vw);
   }
 
-  .partner {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.09);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 24px 70px rgba(0,0,0,0.22);
-    transition: 0.25s ease;
+  .partner{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    text-decoration:none;
+    padding:16px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(20px);
+    transition:.25s;
   }
 
-  .partner:hover {
-    transform: translateY(-3px);
-    border-color: rgba(103, 232, 249, 0.55);
+  .partner:hover{
+    transform:translateY(-3px);
+    border-color:rgba(34,211,238,.4);
   }
 
-  .partner img {
-    width: 58px;
-    height: 58px;
-    border-radius: 18px;
-    object-fit: cover;
-    background: rgba(34,211,238,0.12);
-    padding: 6px;
+  .partner img{
+    width:58px;
+    height:58px;
+    border-radius:18px;
+    object-fit:cover;
+    background:white;
+    padding:6px;
   }
 
-  .partner strong {
-    display: block;
-    font-size: 22px;
+  .partner strong{
+    display:block;
+    font-size:22px;
   }
 
-  .partner span {
-    color: #d1d5db;
-    font-size: 15px;
+  .partner span{
+    color:#cbd5e1;
+    font-size:14px;
   }
 
-  .heroContent {
-    position: relative;
-    z-index: 2;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 120px 0 90px;
+  .heroContent{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:0 auto;
+    padding:120px 0 80px;
   }
 
-  .badge {
-    display: inline-block;
-    padding: 13px 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(103, 232, 249, 0.45);
-    background: rgba(34, 211, 238, 0.12);
-    color: #a5f3fc;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 12px;
-    font-weight: 900;
+  .badge{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:999px;
+    border:1px solid rgba(34,211,238,.4);
+    background:rgba(34,211,238,.12);
+    color:#a5f3fc;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.2em;
   }
 
-  h1 {
-    margin: 24px 0 0;
-    font-size: clamp(64px, 15vw, 150px);
-    line-height: 0.88;
-    letter-spacing: -0.09em;
+  h1{
+    margin:24px 0 0;
+    font-size:clamp(64px,15vw,150px);
+    line-height:.9;
+    letter-spacing:-.08em;
   }
 
-  h1 span {
-    display: block;
-    background: linear-gradient(90deg, #ffffff, #67e8f9, #a78bfa);
-    -webkit-background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 24px rgba(34,211,238,0.32));
+  h1 span{
+    display:block;
+    background:linear-gradient(90deg,#fff,#67e8f9,#a78bfa);
+    -webkit-background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 0 20px rgba(34,211,238,.3));
   }
 
-  .lead {
-    max-width: 780px;
-    margin: 30px 0 0;
-    color: #e2e8f0;
-    font-size: clamp(20px, 3vw, 30px);
-    line-height: 1.45;
-    font-weight: 650;
+  .lead{
+    max-width:760px;
+    margin-top:30px;
+    color:#e2e8f0;
+    font-size:clamp(20px,3vw,30px);
+    line-height:1.5;
   }
 
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 34px;
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:36px;
   }
 
   .primary,
-  .secondary {
-    min-height: 58px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 24px;
-    border-radius: 18px;
-    text-decoration: none;
-    font-weight: 900;
+  .secondary{
+    min-height:58px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 24px;
+    border-radius:18px;
+    text-decoration:none;
+    font-weight:800;
   }
 
-  .primary {
-    background: linear-gradient(135deg, #22d3ee, #67e8f9);
-    color: #020617;
-    box-shadow: 0 18px 50px rgba(34,211,238,0.26);
+  .primary{
+    background:linear-gradient(135deg,#22d3ee,#67e8f9);
+    color:#020617;
+    box-shadow:0 18px 60px rgba(34,211,238,.28);
   }
 
-  .secondary {
-    color: white;
-    border: 1px solid rgba(255,255,255,0.22);
-    background: rgba(255,255,255,0.07);
+  .secondary{
+    color:white;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.06);
   }
 
   .section,
-  .wallet {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 80px 22px;
+  .subnames,
+  .wallet{
+    max-width:1180px;
+    margin:0 auto;
+    padding:90px 22px;
   }
 
-  .sectionLabel {
-    color: #67e8f9;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 12px;
-    font-weight: 900;
+  .sectionLabel{
+    color:#67e8f9;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12px;
+    font-weight:900;
   }
 
-  h2 {
-    margin: 12px 0 0;
-    max-width: 850px;
-    font-size: clamp(36px, 7vw, 64px);
-    line-height: 1;
-    letter-spacing: -0.06em;
+  h2{
+    margin-top:12px;
+    font-size:clamp(36px,7vw,64px);
+    line-height:1;
+    letter-spacing:-.06em;
+    max-width:850px;
   }
 
-  .sectionText {
-    max-width: 720px;
-    color: #cbd5e1;
-    font-size: 18px;
-    line-height: 1.75;
+  .sectionText{
+    max-width:720px;
+    color:#cbd5e1;
+    font-size:18px;
+    line-height:1.8;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 16px;
-    margin-top: 34px;
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+    margin-top:36px;
   }
 
-  .card {
-    padding: 24px;
-    border-radius: 28px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+  .card{
+    padding:26px;
+    border-radius:28px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
   }
 
-  .card span {
-    color: #67e8f9;
-    font-weight: 900;
-    letter-spacing: 0.18em;
-    font-size: 12px;
+  .card span{
+    color:#67e8f9;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.18em;
   }
 
-  .card p {
-    margin: 14px 0 0;
-    font-size: 18px;
-    color: #e5e7eb;
+  .card p{
+    margin-top:14px;
+    color:#e5e7eb;
+    font-size:18px;
+    line-height:1.6;
   }
 
-  .wallet {
-    display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 28px;
-    align-items: center;
+  .subnames,
+  .wallet{
+    display:grid;
+    grid-template-columns:1fr 400px;
+    gap:28px;
+    align-items:center;
   }
 
-  .walletCard {
-    border-radius: 32px;
-    background: white;
-    color: #020617;
-    padding: 28px;
-    box-shadow: 0 30px 90px rgba(0,0,0,0.28);
+  .subnameCard,
+  .walletCard{
+    padding:28px;
+    border-radius:32px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+    box-shadow:0 30px 80px rgba(0,0,0,.3);
   }
 
-  .walletCard small {
-    display: block;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 900;
-    font-size: 12px;
+  .subnameCard span,
+  .walletCard small{
+    display:block;
+    color:#67e8f9;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12px;
+    font-weight:900;
+    margin-bottom:14px;
   }
 
-  .walletCard strong {
-    display: block;
-    margin: 6px 0 26px;
-    font-size: 48px;
-    letter-spacing: -0.07em;
-    background: linear-gradient(90deg, #020617, #0891b2, #7c3aed);
-    -webkit-background-clip: text;
-    color: transparent;
+  .subnameCard strong{
+    display:block;
+    margin-top:12px;
+    padding:16px;
+    border-radius:18px;
+    background:rgba(255,255,255,.08);
+    color:#e0f2fe;
+    font-size:18px;
   }
 
-  .walletCard code {
-    display: block;
-    margin-top: 8px;
-    padding: 16px;
-    border-radius: 16px;
-    background: #e2e8f0;
-    color: #334155;
+  .walletCard{
+    background:white;
+    color:#020617;
   }
 
-  .walletCard button {
-    width: 100%;
-    margin-top: 14px;
-    border: 0;
-    border-radius: 18px;
-    padding: 17px;
-    color: white;
-    font-size: 16px;
-    font-weight: 900;
-    background: linear-gradient(135deg, #020617, #172554);
+  .walletCard strong{
+    display:block;
+    margin:6px 0 24px;
+    font-size:48px;
+    letter-spacing:-.06em;
+    background:linear-gradient(90deg,#020617,#0891b2,#7c3aed);
+    -webkit-background-clip:text;
+    color:transparent;
   }
 
-  @media (max-width: 760px) {
-    .nav {
-      align-items: flex-start;
+  .walletCard code{
+    display:block;
+    margin-top:8px;
+    padding:16px;
+    border-radius:16px;
+    background:#e2e8f0;
+    color:#334155;
+  }
+
+  .walletCard button{
+    width:100%;
+    margin-top:18px;
+    border:0;
+    border-radius:18px;
+    padding:16px;
+    background:linear-gradient(135deg,#020617,#172554);
+    color:white;
+    font-size:16px;
+    font-weight:800;
+  }
+
+  @media(max-width:760px){
+
+    .nav{
+      flex-direction:column;
     }
 
-    .partners {
-      width: 58vw;
+    .partners{
+      width:100%;
     }
 
-    .partner {
-      padding: 11px;
-      border-radius: 22px;
+    .subnames,
+    .wallet{
+      grid-template-columns:1fr;
     }
 
-    .partner img {
-      width: 44px;
-      height: 44px;
+    .actions a{
+      width:100%;
     }
 
-    .partner strong {
-      font-size: 16px;
-    }
-
-    .partner span {
-      font-size: 12px;
-    }
-
-    .brand img {
-      width: 44px;
-      height: 44px;
-    }
-
-    .brand strong {
-      font-size: 24px;
-    }
-
-    .heroContent {
-      padding-top: 100px;
-    }
-
-    .actions a {
-      width: 100%;
-    }
-
-    .wallet {
-      grid-template-columns: 1fr;
+    .heroContent{
+      padding-top:80px;
     }
   }
 `;
