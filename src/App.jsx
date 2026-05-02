@@ -83,7 +83,7 @@ export default function App() {
 
 
 {/* USE CASES */}
-<section className="section">
+<section className="section" id="uses">
   <div className="section-header">
     <span className="section-tag">USE CASES</span>
     <h2>
