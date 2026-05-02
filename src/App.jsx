@@ -1,596 +1,382 @@
 import React from "react";
-
 import iotaLogo from "./assets/iota-logo.png";
 import tradeBg from "./assets/trade-bg.png";
 
 export default function App() {
   const useCases = [
-    "Premium IOTA Name for global trade identity",
-    "Readable wallet address for payments and assets",
-    "Gateway for invoices, certificates, and trade documents",
-    "Brandable entry point for RWA and NFT trade assets",
-    "Unlimited subnames minting for teams, shipments, invoices, and partners",
+    "Digital Trade Platform",
+    "Trade Finance Portal",
+    "Supply Chain Verification",
+    "RWA Tokenization",
+    "Web3 Marketplace",
+    "Unlimited Subnames",
   ];
 
   return (
     <main className="page">
       <style>{styles}</style>
 
-      {/* HERO */}
+      {/* Hero section */}
       <section
         className="hero"
         style={{
           backgroundImage: `
-            linear-gradient(
-              rgba(2,6,23,0.92),
-              rgba(15,23,42,0.88)
-            ),
+            linear-gradient(90deg, rgba(2,6,23,.96), rgba(2,6,23,.72)),
             url(${tradeBg})
           `,
         }}
       >
-        {/* NAV */}
         <nav className="nav">
-          <a
-            href="https://iota.org"
-            target="_blank"
-            rel="noreferrer"
-            className="brand"
-          >
+          <a href="https://iota.org" target="_blank" rel="noreferrer" className="logo">
             <img src={iotaLogo} alt="IOTA" />
+            <span>trade.<b>iota</b></span>
           </a>
-        </nav>
-        {/* HERO CONTENT */}
-        <div className="heroContent">
-          <p className="badge">PREMIUM IOTA NAME FOR SALE</p>
-
-          <h1>
-             <span>trade.iota</span>
-          </h1>
-
-          <p className="lead">
-            A premium human-readable IOTA Name designed for
-            global trade, tokenized assets, wallet addressing,
-            supply-chain verification, and digital commerce.
-          </p>
-
-          <div className="actions">
-            <a
-              href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items&tokenId=0x0e444e3a3f543fb7ce87b0ae0c913186e132962997852254026521e0795399af&modalSlug=0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration&nav=1"
-              target="_blank"
-              rel="noreferrer"
-              className="primary"
-            >
-              Buy it on Tradeport
-            </a>
-
-            <a
-              href="https://iotanames.com"
-              target="_blank"
-              rel="noreferrer"
-              className="secondary"
-            >
-              Mint your own unique IOTA Name
+          <div className="navLinks">
+            <a href="#overview">Overview</a>
+            <a href="#uses">Use Cases</a>
+            <a href="#compliance">Compliance</a>
+            <a href="https://tradeport.xyz" target="_blank" rel="noreferrer" className="navBtn">
+              Make an Offer
             </a>
           </div>
+        </nav>
+
+        {/* Hero grid: headline + premium card */}
+        <div className="heroGrid" id="overview">
+          <div>
+            <p className="badge">Premium Web3 Domain</p>
+            <h1>trade.<span>iota</span></h1>
+            <h2>Built for the Future of Global Trade</h2>
+            <p className="lead">
+              A short, powerful and brandable IOTA Name for next‑generation digital trade,
+              tokenization, supply‑chain infrastructure, wallet addressing, and Web3 commerce platforms.
+            </p>
+            <div className="actions">
+              <a
+                href="https://tradeport.xyz"
+                target="_blank"
+                rel="noreferrer"
+                className="primary"
+              >
+                Buy it on TradePort →
+              </a>
+              <a
+                href="https://iotanames.com"
+                target="_blank"
+                rel="noreferrer"
+                className="secondary"
+              >
+                Mint your own IOTA Name
+              </a>
+            </div>
+          </div>
+
+          {/* Premium card */}
+          <aside className="premiumCard">
+            <p>Premium Domain</p>
+            <h3>trade.iota</h3>
+            <ul>
+              <li>Short, memorable, and easy to brand</li>
+              <li>Human‑readable wallet destination2</li>
+              <li>Unlimited branded subnames3</li>
+              <li>Built for trade, RWA, and enterprise DLT</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      {/* USE CASES */}
-      <section className="section">
-        <p className="sectionLabel">Why trade.iota matters</p>
-
-        <h2>A premium digital identity for global trade.</h2>
-
-        <p className="sectionText">
-          trade.iota can function as a wallet address,
-          enterprise identity, document hub, payment gateway,
-          and tokenized trade infrastructure layer.
-        </p>
-
-        <div className="grid">
-          {useCases.map((item, index) => (
-            <div className="card" key={item}>
-              <span>0{index + 1}</span>
-              <p>{item}</p>
+      {/* Use‑cases section */}
+      <section className="section" id="uses">
+        <p className="sectionTag">Why trade.iota?</p>
+        <h2>The perfect name for serious digital trade.</h2>
+        <div className="useGrid">
+          {useCases.map((item) => (
+            <div className="useCard" key={item}>
+              <div className="icon">◇</div>
+              <strong>{item}</strong>
             </div>
           ))}
         </div>
       </section>
 
-      {/* SUBNAMES */}
-      <section className="subnames">
+      {/* Compliance notice */}
+      <section className="compliance" id="compliance">
+        <div className="complianceImage" />
         <div>
-          <p className="sectionLabel">Unlimited Subnames</p>
-
-          <h2>Create unlimited branded subnames.</h2>
-
-          <p className="sectionText">
-            Build a complete trade ecosystem under trade.iota.
-            Create custom names for invoices, payments,
-            exporters, logistics providers, customs,
-            trade finance, and supply-chain operations.
+          <p className="sectionTag">Compliance Notice</p>
+          <p>
+            This page advertises the possible sale of a domain name only.
+            It is not an investment solicitation, securities offering, token sale, exchange service,
+            broker/dealer service, crowdfunding offer, lending product, or promise of profit.
           </p>
-        </div>
-
-        <div className="subnameCard">
-          <span>Examples</span>
-
-          <strong>pay.trade.iota</strong>
-          <strong>shipping.trade.iota</strong>
-          <strong>invoice.trade.iota</strong>
-          <strong>africa.trade.iota</strong>
-          <strong>customs.trade.iota</strong>
+          <p>
+            No equity, shares, dividends, yield, tokens, or financial returns are being offered.
+          </p>
         </div>
       </section>
 
-      {/* WALLET */}
-      <section className="wallet">
+      {/* Call to action */}
+      <section className="cta">
         <div>
-          <p className="sectionLabel">Wallet Address</p>
-
-          <h2>Send payments directly to trade.iota</h2>
-
-          <p className="sectionText">
-            Replace complex wallet addresses with a readable,
-            trusted digital identity for payments,
-            tokenized assets, invoices, and trade settlement.
+          <h2>
+            Interested in acquiring <span>trade.iota?</span>
+          </h2>
+          <p>
+            Serious inquiries are welcome. Send your offer and preferred transfer process.
           </p>
         </div>
-
-        <div className="walletCard">
-          <small>Recipient</small>
-
-          <strong>trade.iota</strong>
-
-          <small>Wallet Address</small>
-
-          <code>0x8f2a...91b2</code>
-
-          <button>Send / Transfer</button>
-        </div>
+        <a href="https://tradeport.xyz" target="_blank" rel="noreferrer" className="primary">
+          Contact Seller →
+        </a>
       </section>
-   
-{/* FOOTER */}
-<footer className="footer">
-  <div className="footerGrid">
 
-    <div>
-      <h3>trade.iota</h3>
-
-      <p>
-        Premium IOTA Name designed for global trade,
-        tokenized assets, digital identity,
-        and wallet-address routing.
-      </p>
-    </div>
-
-    <div>
-      <h4>Compliance</h4>
-
-      <ul>
-        <li>Human-readable wallet identity</li>
-        <li>Digital trade infrastructure</li>
-        <li>Tokenized asset compatibility</li>
-        <li>Enterprise-ready naming layer</li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Resources</h4>
-
-      <ul>
-        <li>
-          <a
-            href="https://iota.org"
-            target="_blank"
-            rel="noreferrer"
-          >
-            IOTA Foundation
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://docs.iota.org"
-            target="_blank"
-            rel="noreferrer"
-          >
-            IOTA Docs
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://iotanames.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            IOTA Names
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div className="footerBottom">
-    <p>
-      © 2026 trade.iota • Built on IOTA MoveVM •
-      Decentralized Digital Identity Infrastructure
-    </p>
-
-    <p>
-      trade.iota is an independently owned IOTA Name
-      and is not officially affiliated with the IOTA Foundation.
-    </p>
-  </div>
-</footer>
-
- </main>
+      {/* Footer */}
+      <footer className="footer">
+        <strong>
+          trade.<span>iota</span>
+        </strong>
+        <p>
+          © 2026 trade.iota. Domain sale only. Not affiliated with or endorsed by IOTA unless expressly stated.
+        </p>
+      </footer>
+    </main>
   );
 }
 
 const styles = `
-  *{
-    box-sizing:border-box;
-  }
-
-  body{
-    margin:0;
-    background:#020617;
-  }
-
-  .page{
-    min-height:100vh;
-    background:#020617;
-    color:white;
-    font-family:Inter, sans-serif;
-  }
-
-  .hero{
-    min-height:100vh;
-    background-size:cover;
-    background-position:center;
-    padding:24px;
-    position:relative;
-  }
-
-  .hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(circle at top right, rgba(34,211,238,0.18), transparent 30%),
-      radial-gradient(circle at bottom left, rgba(124,58,237,0.2), transparent 34%);
-  }
-
-  .nav{
-    position:relative;
-    z-index:2;
-    max-width:1180px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-  }
-
-  .brand{
-    display:flex;
-    gap:14px;
-    align-items:center;
-    color:white;
-    text-decoration:none;
-  }
-
-  .brand img{
-    width:56px;
-    height:56px;
-    border-radius:18px;
-    background:rgba(255,255,255,0.08);
-    padding:8px;
-  }
-
-  .brand strong{
-    display:block;
-    font-size:30px;
-  }
-
-  .brand span{
-    font-size:11px;
-    color:#cbd5e1;
-    text-transform:uppercase;
-    letter-spacing:.18em;
-  }
-
-  .heroContent{
-    position:relative;
-    z-index:2;
-    max-width:1180px;
-    margin:0 auto;
-    padding:120px 0 80px;
-  }
-
-  .badge{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:999px;
-    border:1px solid rgba(34,211,238,.4);
-    background:rgba(34,211,238,.12);
-    color:#a5f3fc;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.2em;
-  }
-
-  h1{
-    margin:24px 0 0;
-    font-size:clamp(64px,15vw,150px);
-    line-height:.9;
-    letter-spacing:-.08em;
-  }
-
-  h1 span{
-    display:block;
-    background:linear-gradient(90deg,#fff,#67e8f9,#a78bfa);
-    -webkit-background-clip:text;
-    color:transparent;
-    filter:drop-shadow(0 0 20px rgba(34,211,238,.3));
-  }
-
-  .lead{
-    max-width:760px;
-    margin-top:30px;
-    color:#e2e8f0;
-    font-size:clamp(20px,3vw,30px);
-    line-height:1.5;
-  }
-
-  .actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:16px;
-    margin-top:36px;
-  }
-
-  .primary,
-  .secondary{
-    min-height:58px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:16px 24px;
-    border-radius:18px;
-    text-decoration:none;
-    font-weight:800;
-  }
-
-  .primary{
-    background:linear-gradient(135deg,#22d3ee,#67e8f9);
-    color:#020617;
-    box-shadow:0 18px 60px rgba(34,211,238,.28);
-  }
-
-  .secondary{
-    color:white;
-    border:1px solid rgba(255,255,255,.18);
-    background:rgba(255,255,255,.06);
-  }
-
-  .section,
-  .subnames,
-  .wallet{
-    max-width:1180px;
-    margin:0 auto;
-    padding:90px 22px;
-  }
-
-  .sectionLabel{
-    color:#67e8f9;
-    text-transform:uppercase;
-    letter-spacing:.18em;
-    font-size:12px;
-    font-weight:900;
-  }
-
-  h2{
-    margin-top:12px;
-    font-size:clamp(36px,7vw,64px);
-    line-height:1;
-    letter-spacing:-.06em;
-    max-width:850px;
-  }
-
-  .sectionText{
-    max-width:720px;
-    color:#cbd5e1;
-    font-size:18px;
-    line-height:1.8;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:18px;
-    margin-top:36px;
-  }
-
-  .card{
-    padding:26px;
-    border-radius:28px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(12px);
-  }
-
-  .card span{
-    color:#67e8f9;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:.18em;
-  }
-
-  .card p{
-    margin-top:14px;
-    color:#e5e7eb;
-    font-size:18px;
-    line-height:1.6;
-  }
-
-  .subnames,
-  .wallet{
-    display:grid;
-    grid-template-columns:1fr 400px;
-    gap:28px;
-    align-items:center;
-  }
-
-  .subnameCard,
-  .walletCard{
-    padding:28px;
-    border-radius:32px;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.1);
-    backdrop-filter:blur(20px);
-    box-shadow:0 30px 80px rgba(0,0,0,.3);
-  }
-
-  .subnameCard span,
-  .walletCard small{
-    display:block;
-    color:#67e8f9;
-    text-transform:uppercase;
-    letter-spacing:.18em;
-    font-size:12px;
-    font-weight:900;
-    margin-bottom:14px;
-  }
-
-  .subnameCard strong{
-    display:block;
-    margin-top:12px;
-    padding:16px;
-    border-radius:18px;
-    background:rgba(255,255,255,.08);
-    color:#e0f2fe;
-    font-size:18px;
-  }
-
-  .walletCard{
-    background:white;
-    color:#020617;
-  }
-
-  .walletCard strong{
-    display:block;
-    margin:6px 0 24px;
-    font-size:48px;
-    letter-spacing:-.06em;
-    background:linear-gradient(90deg,#020617,#0891b2,#7c3aed);
-    -webkit-background-clip:text;
-    color:transparent;
-  }
-
-  .walletCard code{
-    display:block;
-    margin-top:8px;
-    padding:16px;
-    border-radius:16px;
-    background:#e2e8f0;
-    color:#334155;
-  }
-
-  .walletCard button{
-    width:100%;
-    margin-top:18px;
-    border:0;
-    border-radius:18px;
-    padding:16px;
-    background:linear-gradient(135deg,#020617,#172554);
-    color:white;
-    font-size:16px;
-    font-weight:800;
-  }
-
-  @media(max-width:760px){
-
-    .subnames,
-    .wallet{
-      grid-template-columns:1fr;
-    }
-
-    .actions a{
-      width:100%;
-    }
-
-    .heroContent{
-      padding-top:80px;
-    }
-  }
-
-.footer{
-  margin-top:80px;
-  padding:60px 22px 30px;
-  border-top:1px solid rgba(255,255,255,.08);
-  background:rgba(255,255,255,.03);
-  backdrop-filter:blur(10px);
+*{box-sizing:border-box}
+body{margin:0;background:#020617}
+.page{
+  min-height:100vh;
+  background:#020617;
+  color:white;
+  font-family:Inter,system-ui,sans-serif;
 }
-
-.footerGrid{
+.hero{
+  min-height:100vh;
+  background-size:cover;
+  background-position:center;
+  padding:28px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.nav{
   max-width:1180px;
   margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
-
-.footer h3{
-  margin:0 0 14px;
-  font-size:28px;
-  letter-spacing:-.04em;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+  text-decoration:none;
+  font-size:30px;
+  font-weight:900;
 }
-
-.footer h4{
-  margin-bottom:14px;
-  color:#67e8f9;
+.logo img{
+  width:48px;
+  height:48px;
+  border-radius:16px;
+}
+.navLinks{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.navLinks a{
+  color:white;
+  text-decoration:none;
   text-transform:uppercase;
-  letter-spacing:.12em;
   font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
 }
-
-.footer p{
-  color:#cbd5e1;
-  line-height:1.8;
+.navBtn,
+.primary{
+  background:linear-gradient(135deg,#14b8a6,#22d3ee);
+  color:#020617!important;
+  padding:16px 24px;
+  border-radius:12px;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 18px 50px rgba(34,211,238,.25);
 }
-
-.footer ul{
-  list-style:none;
-  padding:0;
+.heroGrid{
+  max-width:1180px;
+  margin:0 auto;
+  padding:120px 0 70px;
+  display:grid;
+  grid-template-columns:1fr 340px;
+  gap:70px;
+  align-items:center;
+}
+.badge{
+  display:inline-block;
+  padding:10px 16px;
+  border:1px solid rgba(34,211,238,.55);
+  border-radius:999px;
+  color:#a5f3fc;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:12px;
+  font-weight:900;
+  background:rgba(34,211,238,.08);
+}
+h1{
+  margin:24px 0 8px;
+  font-size:clamp(70px,14vw,145px);
+  line-height:.85;
+  letter-spacing:-.09em;
+}
+.hero h2{
+  font-size:clamp(30px,5vw,48px);
   margin:0;
 }
-
-.footer li{
-  margin-bottom:12px;
-  color:#cbd5e1;
+.lead{
+  max-width:680px;
+  color:#e2e8f0;
+  font-size:20px;
+  line-height:1.8;
+  margin-top:42px;
 }
-
-.footer a{
-  color:#cbd5e1;
+.actions{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+.secondary{
+  color:white;
   text-decoration:none;
-  transition:.2s;
+  border:1px solid rgba(255,255,255,.25);
+  padding:16px 24px;
+  border-radius:12px;
+  font-weight:900;
+  background:rgba(255,255,255,.06);
 }
-
-.footer a:hover{
-  color:#67e8f9;
+.premiumCard{
+  padding:36px;
+  border-radius:24px;
+  background:rgba(2,6,23,.75);
+  border:1px solid rgba(125,211,252,.28);
+  backdrop-filter:blur(18px);
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
 }
-
-.footerBottom{
+.premiumCard p,
+.sectionTag{
+  color:#22d3ee;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:12px;
+  font-weight:900;
+}
+.premiumCard h3{
+  font-size:42px;
+  margin:12px 0 28px;
+}
+.premiumCard li{
+  margin:18px 0;
+  color:#dbeafe;
+  line-height:1.5;
+}
+.section{
   max-width:1180px;
-  margin:40px auto 0;
-  padding-top:24px;
-  border-top:1px solid rgba(255,255,255,.08);
+  margin:0 auto;
+  padding:70px 28px;
 }
-
-.footerBottom p{
+.section h2{
+  font-size:clamp(32px,5vw,48px);
+  max-width:620px;
+  line-height:1.08;
+}
+.useGrid{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:16px;
+}
+.useCard{
+  min-height:150px;
+  padding:22px;
+  border-radius:16px;
+  border:1px solid rgba(125,211,252,.24);
+  background:rgba(255,255,255,.035);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.icon{
+  font-size:38px;
+  color:#22d3ee;
+  margin-bottom:14px;
+}
+.compliance,
+.cta{
+  max-width:1180px;
+  margin:32px auto;
+  padding:34px;
+  border-radius:22px;
+  border:1px solid rgba(125,211,252,.24);
+  background:rgba(255,255,255,.04);
+}
+.compliance{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:36px;
+  align-items:center;
+}
+.complianceImage{
+  height:230px;
+  border-radius:18px;
+  background:linear-gradient(135deg,rgba(34,211,238,.16),rgba(124,58,237,.16));
+}
+.compliance p{
+  color:#cbd5e1;
+  font-size:18px;
+  line-height:1.75;
+}
+.cta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.cta h2{
+  margin:0;
+  font-size:36px;
+}
+.cta p{
+  color:#cbd5e1;
+}
+.footer{
+  max-width:1180px;
+  margin:0 auto;
+  padding:44px 28px;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
   color:#94a3b8;
-  font-size:14px;
+}
+.footer strong{
+  color:white;
+  font-size:28px;
+}
+@media(max-width:800px){
+  .hero{padding:22px;background-position:center top}
+  .nav{align-items:flex-start}
+  .navLinks{display:none}
+  .heroGrid{grid-template-columns:1fr;padding-top:90px;gap:36px}
+  .premiumCard{display:none}
+  .actions a{width:100%;text-align:center;justify-content:center}
+  .compliance{grid-template-columns:1fr}
+  .complianceImage{display:none}
+  .cta{flex-direction:column;align-items:flex-start}
+  .footer{flex-direction:column}
 }
 `;
