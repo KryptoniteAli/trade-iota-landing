@@ -61,26 +61,30 @@ export default function App() {
             A premium human-readable IOTA Name designed for
             global trade, tokenized assets, wallet addressing,
             supply-chain verification, and digital commerce.
-          </p>
-
-          <div className="actions">
+ 
             <a
-              href="https://iotanames.com"
-              target="_blank"
-              rel="noreferrer"
-              className="primary"
-            >
-             Get your own IOTA Names
-            </a>
-
-            <a
-              href="https://tradeport.xyz"
+              href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items&tokenId=0x0e444e3a3f543fb7ce87b0ae0c913186e132962997852254026521e0795399af&modalSlug=0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration&nav=1"
               target="_blank"
               rel="noreferrer"
               className="secondary"
             >
               Get it on TradePort
             </a>
+
+
+ <a
+              href="https://iotanames.com"
+              target="_blank"
+              rel="noreferrer"
+              className="primary"
+            >
+             Mint  your own IOTA Names
+            </a>
+
+
+
+
+
           </div>
         </div>
       </section>
