@@ -41,7 +41,8 @@ export default function App() {
             <img src={iotaLogo} alt="IOTA" />
             
             
-
+  </a>
+</nav>
 
 
 
