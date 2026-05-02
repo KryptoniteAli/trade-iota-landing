@@ -21,7 +21,7 @@ import React from "react";
 import iotaLogoImg from "./assets/iota-logo.png";
 import iotaNamesLogoImg from "./assets/iotanames.jpg";
 import tradeportLogoImg from "./assets/tradeport.svg";
-// import worldMapImg from "./assets/world-map.png";
+ import worldMapImg from "./assets/trade-bg.png";
 
 export default function App() {
   const useCases = [
@@ -63,9 +63,9 @@ export default function App() {
       <header className="hero">
 
 
-<div className="heroBg"></div>
-
-     
+<div className="heroBg">
+  <img className="heroMap" src={worldMapImg} alt="Decorative world map" />
+</div>     
 
 
         <nav className="nav">
