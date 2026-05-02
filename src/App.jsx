@@ -1,50 +1,81 @@
 import React from "react";
 
-export default function TradeIotaLandingPage() { const features = [ ["Verifiable trade documents", "Digitize invoices, certificates, bills of lading, and shipment records with tamper-evident proofs on IOTA."], ["Tokenized goods and assets", "Represent consignments, product passports, warehouse receipts, and real-world trade assets as onchain objects."], ["Identity-first trust layer", "Connect traders, authorities, logistics providers, and finance partners through verifiable digital identities."], ["IOTA Names", "Use a domain-style name as a wallet address, making payments and asset transfers easier to read."], ];
+export default function TradeIotaLandingPage() { const tradeUseCases = [ ["Verified trade identity", "trade.iota can become a memorable identity for exporters, importers, brokers, freight forwarders, ports, and customs-facing services."], ["Wallet address for settlement", "Instead of pasting a long IOTA address, a partner can send payments or assets to trade.iota once it resolves to the correct wallet."], ["Document verification hub", "Use trade.iota as the branded gateway for invoices, certificates of origin, bills of lading, warehouse receipts, and shipment proofs."], ["Tokenized RWA gateway", "Point buyers, financiers, and logistics partners to tokenized trade assets, NFTs, and digital product passports connected to real-world shipments."], ["Trust layer for partners", "A readable name reduces friction when multiple companies, agencies, and financial institutions need to verify the same trade flow."], ["Premium global trade brand", "trade.iota is short, category-defining, and aligned with IOTA’s focus on bringing global trade and real-world assets onchain."], ];
 
-return ( <div style={styles.page}> <section style={styles.hero}> <div style={styles.badge}>Trade infrastructure powered by IOTA</div> <h1 style={styles.h1}>Bring global trade onchain.</h1> <p style={styles.lead}> trade.iota helps businesses, logistics providers, and institutions verify trade documents, tokenize real-world assets, and route payments through simple human-readable IOTA names. </p> <div style={styles.actions}> <a style={styles.primary} href="#names">Explore IOTA Names</a> <a style={styles.secondary} href="#use-cases">View use cases</a> </div> </section>
+return ( <main style={styles.page}> <section style={styles.hero}> <div style={styles.overlay} /> <nav style={styles.nav}> <div style={styles.brand}> <IotaLogo /> <span>trade.iota</span> </div> <div style={styles.navLinks}> <a href="https://iotanames.com" style={styles.navLink}>IOTA Names</a> <a href="https://www.tradeport.xyz" style={styles.navLink}>TradePort</a> </div> </nav>
 
-<section style={styles.grid} id="use-cases">
-    {features.map(([title, text]) => (
-      <div style={styles.card} key={title}>
-        <h2 style={styles.cardTitle}>{title}</h2>
-        <p style={styles.cardText}>{text}</p>
-      </div>
-    ))}
-  </section>
-
-  <section style={styles.names} id="names">
-    <div>
-      <p style={styles.kicker}>IOTA Names use case</p>
-      <h2 style={styles.h2}>Use a domain-style name as a wallet address.</h2>
-      <p style={styles.body}>
-        Long wallet addresses are hard to read and easy to mistype. IOTA Names can make trade payments and asset transfers easier by letting users send to readable names such as acme.iota, exporter.iota, or finance-desk.iota instead of copying a long address.
+<div style={styles.heroContent}>
+      <p style={styles.badge}>Premium IOTA Name For Sale</p>
+      <h1 style={styles.h1}>trade.iota is for sale.</h1>
+      <p style={styles.lead}>
+        Own a category-defining IOTA Name for global trade, tokenized assets, supply-chain verification, and wallet-address routing. Make trade.iota the human-readable identity for onchain commerce.
       </p>
-      <ul style={styles.list}>
-        <li>Send IOTA or assets to acme.iota instead of a long wallet address.</li>
-        <li>Attach a trusted trade identity to a readable name.</li>
-        <li>Use one branded name as a payment, identity, and verification endpoint.</li>
-        <li>Reduce address-entry mistakes when settling invoices or transferring tokenized documents.</li>
-      </ul>
+      <div style={styles.actions}>
+        <a style={styles.primary} href="https://iotanames.com" target="_blank" rel="noreferrer">View on IOTA Names</a>
+        <a style={styles.secondary} href="https://www.tradeport.xyz" target="_blank" rel="noreferrer">Explore TradePort</a>
+      </div>
     </div>
+  </section>
 
-    <div style={styles.phoneCard}>
+  <section style={styles.salePanel}>
+    <div>
+      <p style={styles.kicker}>Why this name matters</p>
+      <h2 style={styles.h2}>A simple name for a complex global market.</h2>
+      <p style={styles.body}>
+        Global trade involves many parties, documents, identities, payments, and assets. A short IOTA Name like trade.iota can act as a trusted onchain destination: easy to remember, easy to share, and easier to verify than a long wallet address.
+      </p>
+    </div>
+    <div style={styles.nameCard}>
+      <p style={styles.small}>IOTA Name</p>
+      <h3 style={styles.domain}>trade.iota</h3>
+      <div style={styles.row}><span>Status</span><strong>For sale</strong></div>
+      <div style={styles.row}><span>Use</span><strong>Wallet • Identity • Trade</strong></div>
+      <div style={styles.row}><span>Category</span><strong>Global commerce</strong></div>
+    </div>
+  </section>
+
+  <section style={styles.useCases}>
+    <p style={styles.kickerCenter}>Global trade use cases</p>
+    <h2 style={styles.h2Center}>What trade.iota can become</h2>
+    <div style={styles.grid}>
+      {tradeUseCases.map(([title, text]) => (
+        <article style={styles.card} key={title}>
+          <h3 style={styles.cardTitle}>{title}</h3>
+          <p style={styles.cardText}>{text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section style={styles.walletSection}>
+    <div>
+      <p style={styles.kicker}>Domain name as wallet address</p>
+      <h2 style={styles.h2}>Send to trade.iota instead of copying a long address.</h2>
+      <p style={styles.body}>
+        A readable IOTA Name can reduce payment friction in trade finance, invoice settlement, escrow, NFT transfers, and tokenized document workflows. It gives businesses a professional onchain identity that can be shared on invoices, QR codes, portals, and partner dashboards.
+      </p>
+    </div>
+    <div style={styles.walletCard}>
       <p style={styles.small}>Recipient</p>
-      <h3 style={styles.name}>acme-trade.iota</h3>
-      <p style={styles.small}>Resolves to</p>
+      <h3 style={styles.domainDark}>trade.iota</h3>
+      <p style={styles.small}>Resolves to wallet</p>
       <p style={styles.address}>0x8f2a...91b2</p>
-      <button style={styles.confirm}>Confirm transfer</button>
+      <button style={styles.confirm}>Send / Transfer</button>
     </div>
   </section>
 
-  <section style={styles.footerCta}>
-    <h2 style={styles.h2}>Built for institutions, usable by everyone.</h2>
-    <p style={styles.body}>
-      trade.iota is designed for government agencies, exporters, customs brokers, logistics providers, financiers, and marketplaces that need neutral digital trust infrastructure.
-    </p>
+  <section style={styles.cta}>
+    <h2 style={styles.ctaTitle}>Acquire trade.iota</h2>
+    <p style={styles.ctaText}>A premium IOTA Name for builders, marketplaces, logistics platforms, trade-finance apps, and RWA projects.</p>
+    <div style={styles.actionsCenter}>
+      <a style={styles.primary} href="https://iotanames.com" target="_blank" rel="noreferrer">IOTA Names</a>
+      <a style={styles.secondary} href="https://www.tradeport.xyz" target="_blank" rel="noreferrer">TradePort</a>
+    </div>
   </section>
-</div>
+</main>
 
 ); }
 
-const styles = { page: { minHeight: "100vh", background: "#020817", color: "white", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", }, hero: { padding: "72px 24px 48px", maxWidth: 1100, margin: "0 auto", }, badge: { display: "inline-block", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.08)", borderRadius: 999, padding: "10px 14px", color: "#cbd5e1", fontSize: 14, marginBottom: 24, }, h1: { fontSize: "clamp(44px, 10vw, 82px)", lineHeight: 0.95, letterSpacing: "-0.05em", margin: 0, maxWidth: 850, }, lead: { fontSize: 18, lineHeight: 1.7, color: "#cbd5e1", maxWidth: 760, marginTop: 24, }, actions: { display: "flex", flexWrap: "wrap", gap: 12, marginTop: 28, }, primary: { background: "#22d3ee", color: "#020817", textDecoration: "none", padding: "14px 20px", borderRadius: 16, fontWeight: 700, }, secondary: { border: "1px solid rgba(255,255,255,.18)", color: "white", textDecoration: "none", padding: "14px 20px", borderRadius: 16, fontWeight: 700, }, grid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 16, maxWidth: 1100, margin: "0 auto", padding: "24px", }, card: { background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.10)", borderRadius: 28, padding: 24, }, cardTitle: { fontSize: 22, margin: "0 0 10px" }, cardText: { color: "#cbd5e1", lineHeight: 1.6, margin: 0 }, names: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, maxWidth: 1100, margin: "40px auto 0", padding: "48px 24px", background: "white", color: "#020817", borderRadius: 32, }, kicker: { color: "#64748b", textTransform: "uppercase", letterSpacing: ".16em", fontSize: 13, fontWeight: 700, }, h2: { fontSize: "clamp(30px, 6vw, 48px)", lineHeight: 1.05, margin: "10px 0 16px" }, body: { color: "#475569", fontSize: 17, lineHeight: 1.7 }, list: { color: "#334155", lineHeight: 1.8, paddingLeft: 20 }, phoneCard: { background: "#f1f5f9", borderRadius: 28, padding: 24, alignSelf: "center", }, small: { color: "#64748b", fontSize: 13, textTransform: "uppercase", letterSpacing: ".12em" }, name: { fontSize: 32, margin: "6px 0 28px" }, address: { fontFamily: "monospace", background: "white", padding: 16, borderRadius: 16 }, confirm: { width: "100%", border: 0, background: "#020817", color: "white", padding: 16, borderRadius: 16, fontWeight: 700, marginTop: 12, }, footerCta: { maxWidth: 1100, margin: "0 auto", padding: "64px 24px 80px", }, };
+function IotaLogo() { return ( <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-label="IOTA logo"> <circle cx="21" cy="21" r="21" fill="white" fillOpacity="0.1" /> <circle cx="13" cy="13" r="3" fill="white" /> <circle cx="21" cy="11" r="3" fill="white" /> <circle cx="29" cy="15" r="3" fill="white" /> <circle cx="16" cy="22" r="3" fill="white" /> <circle cx="25" cy="24" r="3" fill="white" /> <circle cx="18" cy="31" r="3" fill="white" /> <circle cx="31" cy="31" r="3" fill="white" /> </svg> ); }
+
+const styles = { page: { minHeight: "100vh", background: "#020817", color: "white", fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", }, hero: { position: "relative", minHeight: "92vh", backgroundImage: "linear-gradient(120deg, rgba(2,8,23,.92), rgba(2,8,23,.62)), url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1800&q=80')", backgroundSize: "cover", backgroundPosition: "center", overflow: "hidden", }, overlay: { position: "absolute", inset: 0, background: "radial-gradient(circle at 80% 20%, rgba(34,211,238,.28), transparent 28%), radial-gradient(circle at 10% 90%, rgba(124,58,237,.32), transparent 32%)", }, nav: { position: "relative", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "22px 24px", maxWidth: 1180, margin: "0 auto", }, brand: { display: "flex", alignItems: "center", gap: 12, fontWeight: 800, fontSize: 20 }, navLinks: { display: "flex", gap: 10, flexWrap: "wrap" }, navLink: { color: "white", textDecoration: "none", border: "1px solid rgba(255,255,255,.18)", padding: "10px 12px", borderRadius: 999, background: "rgba(255,255,255,.06)" }, heroContent: { position: "relative", zIndex: 2, maxWidth: 1180, margin: "0 auto", padding: "96px 24px 120px" }, badge: { display: "inline-block", background: "rgba(34,211,238,.16)", border: "1px solid rgba(34,211,238,.38)", color: "#a5f3fc", borderRadius: 999, padding: "10px 14px", fontWeight: 800, textTransform: "uppercase", letterSpacing: ".14em", fontSize: 12 }, h1: { fontSize: "clamp(52px, 12vw, 118px)", lineHeight: .88, letterSpacing: "-.07em", margin: "24px 0 0", maxWidth: 920 }, lead: { fontSize: "clamp(18px, 2.4vw, 24px)", lineHeight: 1.6, color: "#dbeafe", maxWidth: 760, marginTop: 26 }, actions: { display: "flex", flexWrap: "wrap", gap: 12, marginTop: 34 }, actionsCenter: { display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 12, marginTop: 28 }, primary: { background: "#22d3ee", color: "#020817", textDecoration: "none", padding: "15px 22px", borderRadius: 16, fontWeight: 900, display: "inline-block" }, secondary: { border: "1px solid rgba(255,255,255,.22)", color: "white", textDecoration: "none", padding: "15px 22px", borderRadius: 16, fontWeight: 900, display: "inline-block", background: "rgba(255,255,255,.06)" }, salePanel: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28, maxWidth: 1180, margin: "-72px auto 0", padding: 24, position: "relative", zIndex: 4 }, kicker: { color: "#67e8f9", textTransform: "uppercase", letterSpacing: ".16em", fontSize: 13, fontWeight: 900 }, kickerCenter: { color: "#67e8f9", textTransform: "uppercase", letterSpacing: ".16em", fontSize: 13, fontWeight: 900, textAlign: "center" }, h2: { fontSize: "clamp(32px, 6vw, 56px)", lineHeight: 1.02, letterSpacing: "-.04em", margin: "12px 0 16px" }, h2Center: { fontSize: "clamp(32px, 6vw, 56px)", lineHeight: 1.02, letterSpacing: "-.04em", margin: "12px auto 36px", textAlign: "center", maxWidth: 850 }, body: { color: "#cbd5e1", fontSize: 18, lineHeight: 1.75 }, nameCard: { background: "white", color: "#020817", borderRadius: 32, padding: 28, boxShadow: "0 30px 80px rgba(0,0,0,.35)" }, small: { color: "#64748b", fontSize: 12, textTransform: "uppercase", letterSpacing: ".16em", fontWeight: 900 }, domain: { fontSize: "clamp(36px, 8vw, 64px)", margin: "6px 0 24px", letterSpacing: "-.05em" }, row: { display: "flex", justifyContent: "space-between", gap: 10, borderTop: "1px solid #e2e8f0", padding: "15px 0", color: "#475569" }, useCases: { maxWidth: 1180, margin: "0 auto", padding: "80px 24px 40px" }, grid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }, card: { background: "rgba(255,255,255,.065)", border: "1px solid rgba(255,255,255,.10)", borderRadius: 28, padding: 24 }, cardTitle: { fontSize: 22, margin: "0 0 10px" }, cardText: { color: "#cbd5e1", lineHeight: 1.65, margin: 0 }, walletSection: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 28, maxWidth: 1180, margin: "0 auto", padding: "70px 24px" }, walletCard: { background: "#f8fafc", color: "#020817", borderRadius: 32, padding: 28, alignSelf: "center" }, domainDark: { fontSize: "clamp(36px, 7vw, 56px)", margin: "6px 0 26px", letterSpacing: "-.05em" }, address: { fontFamily: "monospace", background: "#e2e8f0", padding: 16, borderRadius: 16, color: "#334155" }, confirm: { width: "100%", border: 0, background: "#020817", color: "white", padding: 16, borderRadius: 16, fontWeight: 900, marginTop: 12, fontSize: 16 }, cta: { textAlign: "center", padding: "80px 24px 100px", background: "linear-gradient(135deg, rgba(34,211,238,.16), rgba(124,58,237,.18))" }, ctaTitle: { fontSize: "clamp(38px, 8vw, 72px)", margin: 0, letterSpacing: "-.06em" }, ctaText: { color: "#dbeafe", fontSize: 19, lineHeight: 1.65, maxWidth: 700, margin: "18px auto 0" }, };
