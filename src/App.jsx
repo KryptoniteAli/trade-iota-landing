@@ -34,42 +34,49 @@ export default function App() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white relative">
       {/* Navigation bar with IOTA logo, site name, links to iotanames.com and TradePort, and a contact button */}
-      <nav className="flex items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-3">
-          {/* IOTA logo */}
-          <img src={iotaLogo} alt="IOTA logo" className="w-8 h-8" />
-          <span className="text-xl font-bold tracking-wide">trade.iota</span>
-        </div>
-        <div className="flex items-center gap-4">
-          {/* Link to explore more IOTA domain names */}
-          <a
-            href="https://iotanames.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm font-medium text-cyan-300 hover:underline"
-          >
-            <LinkIcon size={16} />
-            More IOTA names
-          </a>
-          {/* Link to the TradePort listing for this domain */}
-          <a
-            href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white"
-          >
-            View on TradePort
-            <ExternalLink size={16} />
-          </a>
-          {/* Contact seller button */}
-          <a
-            href={`mailto:${sellerEmail}?subject=Offer for trade.iota`}
-            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-950"
-          >
-            Make Offer
-          </a>
-        </div>
-      </nav>
+
+
+// Navigation bar: wrap items on small screens to avoid overlap
+<nav className="flex flex-wrap items-center justify-between gap-y-4 px-6 py-4">
+  <div className="flex items-center gap-3">
+    <img src={iotaLogo} alt="IOTA logo" className="w-8 h-8" />
+    <span className="text-xl font-bold tracking-wide">trade.iota</span>
+  </div>
+  <div className="flex flex-wrap items-center gap-4">
+    <a
+      href="https://iotanames.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-sm font-medium text-cyan-300 hover:underline"
+    >
+      <LinkIcon size={16} />
+      More IOTA names
+    </a>
+    <a
+      href="https://tradeport.xyz/domain/trade.iota"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white"
+    >
+      View on TradePort
+      <ExternalLink size={16} />
+    </a>
+    <a
+      href={`mailto:${sellerEmail}?subject=Offer for trade.iota`}
+      className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-950"
+    >
+      Make Offer
+    </a>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
 
       {/* Hero section with a background image and call‑to‑action buttons */}
       <section
