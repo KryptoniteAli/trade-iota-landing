@@ -16,7 +16,6 @@ export default function App() {
     <main className="page">
       <style>{styles}</style>
 
-      {/* Hero section */}
       <section
         className="hero"
         style={{
@@ -31,6 +30,7 @@ export default function App() {
             <img src={iotaLogo} alt="IOTA" />
             <span>trade.<b>iota</b></span>
           </a>
+
           <div className="navLinks">
             <a href="#overview">Overview</a>
             <a href="#uses">Use Cases</a>
@@ -41,54 +41,48 @@ export default function App() {
           </div>
         </nav>
 
-        {/* Hero grid: headline + premium card */}
         <div className="heroGrid" id="overview">
           <div>
             <p className="badge">Premium Web3 Domain</p>
+
             <h1>trade.<span>iota</span></h1>
+
             <h2>Built for the Future of Global Trade</h2>
+
             <p className="lead">
-              A short, powerful and brandable IOTA Name for next‑generation digital trade,
-              tokenization, supply‑chain infrastructure, wallet addressing, and Web3 commerce platforms.
+              A short, powerful and brandable IOTA Name for next-generation
+              digital trade, tokenization, supply-chain infrastructure,
+              wallet addressing, and Web3 commerce platforms.
             </p>
+
             <div className="actions">
-              <a
-                href="https://tradeport.xyz"
-                target="_blank"
-                rel="noreferrer"
-                className="primary"
-              >
+              <a href="https://tradeport.xyz" target="_blank" rel="noreferrer" className="primary">
                 Buy it on TradePort →
               </a>
-              <a
-                href="https://iotanames.com"
-                target="_blank"
-                rel="noreferrer"
-                className="secondary"
-              >
+              <a href="https://iotanames.com" target="_blank" rel="noreferrer" className="secondary">
                 Mint your own IOTA Name
               </a>
             </div>
           </div>
 
-          {/* Premium card */}
           <aside className="premiumCard">
             <p>Premium Domain</p>
             <h3>trade.iota</h3>
+
             <ul>
               <li>Short, memorable, and easy to brand</li>
-              <li>Human‑readable wallet destination2</li>
-              <li>Unlimited branded subnames3</li>
+              <li>Human-readable wallet destination</li>
+              <li>Unlimited branded subnames</li>
               <li>Built for trade, RWA, and enterprise DLT</li>
             </ul>
           </aside>
         </div>
       </section>
 
-      {/* Use‑cases section */}
       <section className="section" id="uses">
         <p className="sectionTag">Why trade.iota?</p>
         <h2>The perfect name for serious digital trade.</h2>
+
         <div className="useGrid">
           {useCases.map((item) => (
             <div className="useCard" key={item}>
@@ -99,45 +93,40 @@ export default function App() {
         </div>
       </section>
 
-      {/* Compliance notice */}
       <section className="compliance" id="compliance">
         <div className="complianceImage" />
+
         <div>
           <p className="sectionTag">Compliance Notice</p>
+
           <p>
             This page advertises the possible sale of a domain name only.
-            It is not an investment solicitation, securities offering, token sale, exchange service,
-            broker/dealer service, crowdfunding offer, lending product, or promise of profit.
+            It is not an investment solicitation, securities offering,
+            token sale, exchange service, broker/dealer service,
+            crowdfunding offer, lending product, or promise of profit.
           </p>
+
           <p>
-            No equity, shares, dividends, yield, tokens, or financial returns are being offered.
+            No equity, shares, dividends, yield, tokens, or financial returns
+            are being offered.
           </p>
         </div>
       </section>
 
-      {/* Call to action */}
       <section className="cta">
         <div>
-          <h2>
-            Interested in acquiring <span>trade.iota?</span>
-          </h2>
-          <p>
-            Serious inquiries are welcome. Send your offer and preferred transfer process.
-          </p>
+          <h2>Interested in acquiring <span>trade.iota?</span></h2>
+          <p>Serious inquiries are welcome. Send your offer and preferred transfer process.</p>
         </div>
+
         <a href="https://tradeport.xyz" target="_blank" rel="noreferrer" className="primary">
           Contact Seller →
         </a>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
-        <strong>
-          trade.<span>iota</span>
-        </strong>
-        <p>
-          © 2026 trade.iota. Domain sale only. Not affiliated with or endorsed by IOTA unless expressly stated.
-        </p>
+        <strong>trade.<span>iota</span></strong>
+        <p>© 2026 trade.iota. Domain sale only. Not affiliated with or endorsed by IOTA unless expressly stated.</p>
       </footer>
     </main>
   );
@@ -181,6 +170,9 @@ body{margin:0;background:#020617}
   height:48px;
   border-radius:16px;
 }
+.logo b,.logo span b,.footer span,h1 span,.cta span{
+  color:#22d3ee;
+}
 .navLinks{
   display:flex;
   align-items:center;
@@ -194,8 +186,7 @@ body{margin:0;background:#020617}
   font-weight:900;
   letter-spacing:.08em;
 }
-.navBtn,
-.primary{
+.navBtn,.primary{
   background:linear-gradient(135deg,#14b8a6,#22d3ee);
   color:#020617!important;
   padding:16px 24px;
@@ -265,8 +256,7 @@ h1{
   backdrop-filter:blur(18px);
   box-shadow:0 30px 90px rgba(0,0,0,.45);
 }
-.premiumCard p,
-.sectionTag{
+.premiumCard p,.sectionTag{
   color:#22d3ee;
   text-transform:uppercase;
   letter-spacing:.16em;
@@ -315,8 +305,7 @@ h1{
   color:#22d3ee;
   margin-bottom:14px;
 }
-.compliance,
-.cta{
+.compliance,.cta{
   max-width:1180px;
   margin:32px auto;
   padding:34px;
