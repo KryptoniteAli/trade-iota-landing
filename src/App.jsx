@@ -79,19 +79,59 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section" id="uses">
-        <p className="sectionTag">Why trade.iota?</p>
-        <h2>The perfect name for serious digital trade.</h2>
 
-        <div className="useGrid">
-          {useCases.map((item) => (
-            <div className="useCard" key={item}>
-              <div className="icon">◇</div>
-              <strong>{item}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
+
+
+{/* USE CASES */}
+<section className="section">
+  <div className="section-header">
+    <span className="section-tag">USE CASES</span>
+    <h2>
+      Unlimited <span>Subnames</span> can be minted
+    </h2>
+
+    <p className="section-description">
+      trade.iota can power an entire ecosystem of branded Web3 identities,
+      marketplaces, applications, and enterprise infrastructure.
+    </p>
+  </div>
+
+  <div className="subnames-grid">
+
+    <div className="subname-card">
+      <span className="subname">pay.trade.iota</span>
+      <p>Wallet routing & payment identity</p>
+    </div>
+
+    <div className="subname-card">
+      <span className="subname">docs.trade.iota</span>
+      <p>Trade documents & verification</p>
+    </div>
+
+    <div className="subname-card">
+      <span className="subname">rwa.trade.iota</span>
+      <p>Real-world asset tokenization</p>
+    </div>
+
+    <div className="subname-card">
+      <span className="subname">logistics.trade.iota</span>
+      <p>Supply-chain & shipment tracking</p>
+    </div>
+
+    <div className="subname-card">
+      <span className="subname">market.trade.iota</span>
+      <p>Web3 marketplaces & commerce</p>
+    </div>
+
+    <div className="subname-card">
+      <span className="subname">vault.trade.iota</span>
+      <p>Enterprise-grade custody & security</p>
+    </div>
+
+  </div>
+</section>
+
+
 
       <section className="compliance" id="compliance">
         <div className="complianceImage" />
@@ -368,4 +408,44 @@ h1{
   .cta{flex-direction:column;align-items:flex-start}
   .footer{flex-direction:column}
 }
+
+
+
+.subnames-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.subname-card {
+  background: rgba(8, 18, 40, 0.78);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 20px;
+  padding: 24px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.subname-card:hover {
+  transform: translateY(-6px);
+  border-color: #35d6ff;
+  box-shadow: 0 0 25px rgba(53, 214, 255, 0.18);
+}
+
+.subname {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #42dfff;
+  margin-bottom: 12px;
+}
+
+.subname-card p {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+
 `;
