@@ -55,12 +55,12 @@ export default function App() {
       More IOTA names
     </a>
     <a
-      href="https://tradeport.xyz/domain/trade.iota"
+      href="https://www.tradeport.xyz/iota/collection/0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration?bottomTab=trades&tab=items&tokenId=0x0e444e3a3f543fb7ce87b0ae0c913186e132962997852254026521e0795399af&modalSlug=0x6d2c743607ef275bd6934fe5c2a7e5179cca6fbd2049cfa79de2310b74f3cf83%3A%3Aname_registration%3A%3ANameRegistration&nav=1"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white"
     >
-      View on TradePort
+      Get it on TradePort
       <ExternalLink size={16} />
     </a>
     <a
