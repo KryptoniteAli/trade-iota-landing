@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowRight,
   BadgeCheck,
@@ -15,15 +15,27 @@ import {
 import { motion } from "framer-motion";
 
 import bg from "./assets/trade-bg.png";
+import hero from "./assets/hero.png";
 import iotaLogo from "./assets/iota-logo.png";
 
 export default function App() {
   const sellerEmail = "your-email@example.com";
-  const [copied, setCopied] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
 
   const tradeportUrl = "https://tradeport.xyz/domain/trade.iota";
   const iotaNamesUrl = "https://iotanames.com";
+
+  const slides = [bg, hero];
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [copied, setCopied] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   const copyDomain = async () => {
     await navigator.clipboard.writeText("trade.iota");
@@ -95,14 +107,17 @@ export default function App() {
         </div>
       </nav>
 
-      <section
-        className="relative overflow-hidden px-6 py-20"
-        style={{
-          backgroundImage: `url(${bg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative overflow-hidden px-6 py-20">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${slide})` }}
+          />
+        ))}
+
         <div className="absolute inset-0 bg-black/65" />
 
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center">
@@ -177,6 +192,21 @@ export default function App() {
               ))}
             </div>
           </motion.div>
+        </div>
+
+        <div className="relative z-10 mt-10 flex justify-center gap-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveSlide(index)}
+              className={`h-2.5 rounded-full transition-all ${
+                index === activeSlide
+                  ? "w-8 bg-cyan-300"
+                  : "w-2.5 bg-white/40"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
