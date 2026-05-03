@@ -45,7 +45,11 @@ export default function App() {
           <div>
             <p className="badge">Premium Web3 Domain</p>
 
-            <h1>trade.<span>iota</span></h1>
+            <h1 className="interactive-title">
+  <span className="trade-word">trade.</span>
+  <span className="iota-word">iota</span>
+</h1>
+
 
             <h2>Built for the Future of Global Trade</h2>
 
@@ -614,6 +618,54 @@ h1{
   .wallet-box strong{
     font-size:34px;
   }
+}
+
+.interactive-title{
+  cursor:pointer;
+  transition:transform .35s ease, filter .35s ease;
+}
+
+.interactive-title:hover{
+  transform:translateY(-6px) scale(1.025);
+  filter:drop-shadow(0 0 28px rgba(34,211,238,.38));
+}
+
+.trade-word,
+.iota-word{
+  display:inline-block;
+  transition:transform .4s ease, color .4s ease, text-shadow .4s ease;
+}
+
+.trade-word{
+  color:#fff;
+}
+
+.iota-word{
+  color:#22d3ee;
+  animation:iotaGlow 3s ease-in-out infinite;
+}
+
+.interactive-title:hover .trade-word{
+  transform:translateX(-6px);
+}
+
+.interactive-title:hover .iota-word{
+  transform:translateX(6px) scale(1.04);
+  text-shadow:0 0 30px rgba(34,211,238,.9);
+}
+
+@keyframes iotaGlow{
+  0%,100%{
+    text-shadow:0 0 10px rgba(34,211,238,.35);
+  }
+
+  50%{
+    text-shadow:0 0 28px rgba(34,211,238,.85);
+  }
+}
+
+.interactive-title:active{
+  transform:scale(.98);
 }
 
 `;
